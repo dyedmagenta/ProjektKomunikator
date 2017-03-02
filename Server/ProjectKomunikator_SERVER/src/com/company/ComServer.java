@@ -14,9 +14,9 @@ public class ComServer {
 
 
     //Lists for sockets and usernames
-    public static ArrayList<Socket> ConnectionArray = new ArrayList<Socket>();
-    public static ArrayList<String> CurrentUsers = new ArrayList<String>();
-
+    //public static ArrayList<Socket> ConnectionArray = new ArrayList<Socket>();
+    //public static ArrayList<String> CurrentUsers = new ArrayList<String>();
+    //TEST
 
     //Starts the main server
     public ComServer startServer(){
