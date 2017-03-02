@@ -17,6 +17,7 @@ public class ComServer {
     //public static ArrayList<Socket> ConnectionArray = new ArrayList<Socket>();
     //public static ArrayList<String> CurrentUsers = new ArrayList<String>();
     //TEST
+    //TEST2
 
     //Starts the main server
     public ComServer startServer(){
