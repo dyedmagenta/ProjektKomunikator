@@ -8,15 +8,15 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
 /**
- * Created by Repcak on 25.02.2017.
+ * Created by repcak on 25.02.2017.
  */
 public class ComServer {
 
 
     //Lists for sockets and usernames
-    //public static ArrayList<Socket> ConnectionArray = new ArrayList<Socket>();
-    //public static ArrayList<String> CurrentUsers = new ArrayList<String>();
-    //TEST
+    public static ArrayList<Socket> ConnectionArray = new ArrayList<Socket>();
+    public static ArrayList<String> CurrentUsers = new ArrayList<String>();
+
 
     //Starts the main server
     public ComServer startServer(){
