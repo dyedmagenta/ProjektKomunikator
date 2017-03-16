@@ -13,16 +13,14 @@ public class ClientThreads implements Runnable {
     //Streams for handling communication
     private PrintWriter writer = null;
     private BufferedReader reader = null;
-    private Socket client;
-    private Executor ex;
+    private final Socket SOCK;
 
     public String USERNAME;
     public String IP;
-    public Socket SOCK;
 
 
     public ClientThreads(Socket client){
-        this.client = client;
+        this.SOCK = client;
 
     }
 
@@ -32,17 +30,16 @@ public class ClientThreads implements Runnable {
         try{
 
         //Streams for handling communication
-        OutputStream out = client.getOutputStream();
+        OutputStream out = SOCK.getOutputStream();
         writer = new PrintWriter(out);
 
-        InputStream in = client.getInputStream();
+        InputStream in = SOCK.getInputStream();
         reader = new BufferedReader(new InputStreamReader(in, "UTF-8"));
-        //===================================QWE
+        //===================================
 
         /*System.out.println(client.getLocalAddress().getHostAddress());
         System.out.println(client.getLocalAddress().getAddress()[0]);
         System.out.println(client.getLocalAddress().getHostName());*/
-
 
 
         String s = null;
@@ -52,19 +49,22 @@ public class ClientThreads implements Runnable {
             return;
         }
 
+
         while((s = reader.readLine()) != null){
-
-
-
-
             writer.write(s + "\n");
             writer.flush();
             System.out.println("Client said: " + s);
 
+
+            //TEST - ECHO FOR ALL SOCKETS TO SEND TO EVERYONE THE MESSAGE A CLIENT SEND
+            for(Socket tempSocket:ComServer.SocketConnectionArray){
+                PrintWriter TEMP_OUT = new PrintWriter(tempSocket.getOutputStream());
+                TEMP_OUT.println(s);
+                TEMP_OUT.flush();
+                System.out.println("Sent to: " + tempSocket.getLocalAddress().getHostName());
+            }
+
         }
-
-
-
 
 
         //Streams need to be closed. They cannot be closed in the main "try" block
@@ -81,6 +81,9 @@ public class ClientThreads implements Runnable {
             }
         }
     }
+
+
+
 
 
     private boolean isClientAuthenticated(String s){

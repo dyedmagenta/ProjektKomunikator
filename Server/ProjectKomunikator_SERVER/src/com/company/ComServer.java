@@ -14,8 +14,8 @@ public class ComServer {
 
 
     //Lists for sockets and usernames
-    public static ArrayList<Socket> ConnectionArray = new ArrayList<Socket>();
-    public static ArrayList<String> CurrentUsers = new ArrayList<String>();
+    public static ArrayList<Socket> SocketConnectionArray = new ArrayList<>();
+    public static ArrayList<String> CurrentUsersNames = new ArrayList<>();
 
 
     //Starts the main server
@@ -31,10 +31,6 @@ public class ComServer {
             e.printStackTrace();
         }
 
-        //Executors - Framework for threads. Creates a ThreadPool
-        //to which we can add threads
-        ExecutorService executor = Executors.newCachedThreadPool();
-
 
         //AVOID PUTTING CODE HERE. THIS IS ONLY FOR ACCEPTING NEW CLIENTS
         //Awaits new connections from clients. If someone connects a new Thread is
@@ -43,7 +39,14 @@ public class ComServer {
             try{
                 Socket client = server.accept();
 
-                executor.execute(new ClientThreads(client));
+                //TEST Adds socket
+                SocketConnectionArray.add(client);
+                System.out.println(SocketConnectionArray.size());
+
+
+                ClientThreads CHAT = new ClientThreads(client);
+                Thread X = new Thread(CHAT);
+                X.start();
                 
             }catch(IOException e){
                 e.printStackTrace();
