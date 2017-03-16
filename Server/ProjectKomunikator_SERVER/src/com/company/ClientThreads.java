@@ -37,8 +37,7 @@ public class ClientThreads implements Runnable {
 
         InputStream in = client.getInputStream();
         reader = new BufferedReader(new InputStreamReader(in, "UTF-8"));
-        //===================================
-
+        //===================================---DERP
 
         /*System.out.println(client.getLocalAddress().getHostAddress());
         System.out.println(client.getLocalAddress().getAddress()[0]);
