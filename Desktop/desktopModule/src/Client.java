@@ -63,7 +63,7 @@ public class Client {
 
 
     }
-    private void sendMessage(String message){
+    public void sendMessage(String message){
         try {
             output.writeObject("Client: "+ message);
             output.flush();
@@ -78,6 +78,8 @@ public class Client {
             try {
                 message=(String) input.readObject();
                 System.out.println("MSG received: "+ message);
+
+
             } catch (IOException e) {
                 e.printStackTrace();
             } catch (ClassNotFoundException e) {
