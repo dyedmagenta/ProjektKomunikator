@@ -26,11 +26,9 @@ public class Server {
                     setupStreams();
                     whileChatting();
 
-                }catch(EOFException e){e.printStackTrace();
-                    closeCrap();
+                }catch(EOFException e){
+                    System.out.println("user disconnected");
                 }
-
-
             }
         } catch(IOException e){
             e.printStackTrace();
@@ -40,12 +38,6 @@ public class Server {
 
     }
 
-    private void closeCrap() throws IOException {
-        System.out.println("zamykam connect");
-        output.close();
-        input.close();
-        connection.close();
-    }
 
     private void whileChatting() throws IOException {
         String message = "you connectedf to server";

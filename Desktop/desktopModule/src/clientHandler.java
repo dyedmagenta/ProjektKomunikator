@@ -7,12 +7,14 @@ import java.net.UnknownHostException;
  * Created by gwozdo on 20.03.2017.
  */
 public class clientHandler {
+
     private static Client client;
     private static clientGui Gui;
     private static boolean connectedToServer = false;
     public static void main(String[] args) {
         Gui = new clientGui();
         Gui.setVisible(true);
+
     }
     public static void createNewClient(String userName,String serverAddress,String serverPort){
         if(!connectedToServer) {
@@ -20,7 +22,7 @@ public class clientHandler {
                 client = new Client(userName, InetAddress.getByName(serverAddress), Integer.parseInt(serverPort));
                 connectedToServer=true;
             } catch (UnknownHostException e) {
-                e.printStackTrace();
+
             }
         }else{
             client.disconnect();
@@ -31,6 +33,10 @@ public class clientHandler {
         }
 
     }
+
+
+
+
     public static void sendMessage(String message){
         client.sendMessage(message);
     }

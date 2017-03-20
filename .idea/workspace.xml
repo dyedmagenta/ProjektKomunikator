@@ -4,8 +4,6 @@
     <list default="true" id="7e651b06-d4e1-4bbb-ba3c-be3915bf2584" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Desktop/desktopModule/src/Client.java" afterPath="$PROJECT_DIR$/Desktop/desktopModule/src/Client.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Desktop/desktopModule/src/clientGui.java" afterPath="$PROJECT_DIR$/Desktop/desktopModule/src/clientGui.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Desktop/desktopModule/src/clientGui.jfd" afterPath="$PROJECT_DIR$/Desktop/desktopModule/src/clientGui.jfd" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Desktop/desktopModule/src/clientHandler.java" afterPath="$PROJECT_DIR$/Desktop/desktopModule/src/clientHandler.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Desktop/desktopModule/src/clientListeningThread.java" afterPath="$PROJECT_DIR$/Desktop/desktopModule/src/clientListeningThread.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Desktop/desktopModule/src/testSRV/Server.java" afterPath="$PROJECT_DIR$/Desktop/desktopModule/src/testSRV/Server.java" />
@@ -38,11 +36,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Server.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Server.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Desktop/desktopModule/src/testSRV/Server.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="193">
-              <caret line="54" column="0" lean-forward="false" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
+            <state relative-caret-position="357">
+              <caret line="28" column="39" lean-forward="true" selection-start-line="28" selection-start-column="39" selection-end-line="28" selection-end-column="39" />
               <folding />
             </state>
           </provider>
@@ -61,8 +59,8 @@
       <file leaf-file-name="Client.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Desktop/desktopModule/src/Client.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="21" column="0" lean-forward="true" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+            <state relative-caret-position="459">
+              <caret line="75" column="9" lean-forward="true" selection-start-line="75" selection-start-column="9" selection-end-line="75" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#whileChatting#0;class#Client#0" expanded="false" />
@@ -71,14 +69,13 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="clientListeningThread.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="clientListeningThread.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Desktop/desktopModule/src/clientListeningThread.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="19" column="27" lean-forward="true" selection-start-line="19" selection-start-column="27" selection-end-line="19" selection-end-column="27" />
+            <state relative-caret-position="91">
+              <caret line="18" column="28" lean-forward="true" selection-start-line="18" selection-start-column="28" selection-end-line="20" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#371#372#0" expanded="true" />
                 <element signature="e#405#406#0" expanded="true" />
               </folding>
             </state>
@@ -88,12 +85,12 @@
       <file leaf-file-name="clientHandler.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Desktop/desktopModule/src/clientHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="544">
-              <caret line="32" column="3" lean-forward="true" selection-start-line="32" selection-start-column="3" selection-end-line="32" selection-end-column="3" />
+            <state relative-caret-position="391">
+              <caret line="32" column="9" lean-forward="false" selection-start-line="32" selection-start-column="9" selection-end-line="32" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1009#1010#0" expanded="true" />
-                <element signature="e#1052#1053#0" expanded="true" />
+                <element signature="e#979#980#0" expanded="true" />
+                <element signature="e#1022#1023#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -171,12 +168,12 @@
         <option value="$PROJECT_DIR$/Desktop/desktopModule/src/testSRV/clientGui.java" />
         <option value="$PROJECT_DIR$/Desktop/desktopModule/src/clientGui.form" />
         <option value="$PROJECT_DIR$/Desktop/desktopModule/src/testSRV/clientHandler.java" />
-        <option value="$PROJECT_DIR$/Desktop/desktopModule/src/testSRV/Server.java" />
         <option value="$PROJECT_DIR$/Desktop/desktopModule/src/clientGui.java" />
         <option value="$PROJECT_DIR$/Desktop/desktopModule/src/clientGui.jfd" />
-        <option value="$PROJECT_DIR$/Desktop/desktopModule/src/clientListeningThread.java" />
         <option value="$PROJECT_DIR$/Desktop/desktopModule/src/Client.java" />
+        <option value="$PROJECT_DIR$/Desktop/desktopModule/src/testSRV/Server.java" />
         <option value="$PROJECT_DIR$/Desktop/desktopModule/src/clientHandler.java" />
+        <option value="$PROJECT_DIR$/Desktop/desktopModule/src/clientListeningThread.java" />
       </list>
     </option>
   </component>
@@ -656,12 +653,19 @@
       <option name="project" value="LOCAL" />
       <updated>1490045982056</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary=" Progress is progress.&#10; dodany JDialog do connectowania sie do servera (narazie tylko 1 chatroom)&#10; dodane zmiana podlaczonego servera">
+      <created>1490051901222</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1490051901222</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -672,7 +676,7 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32921347" sideWeight="0.50289017" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32875264" sideWeight="0.49710983" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32875264" sideWeight="0.49710983" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -733,7 +737,8 @@
     <MESSAGE value="basic socket sht" />
     <MESSAGE value="test" />
     <MESSAGE value="rakopoprawianie .  Thread otrzymywania msg dziala!!! fk yea. nadal RAK" />
-    <option name="LAST_COMMIT_MESSAGE" value="rakopoprawianie .  Thread otrzymywania msg dziala!!! fk yea. nadal RAK" />
+    <MESSAGE value=" Progress is progress.&#10; dodany JDialog do connectowania sie do servera (narazie tylko 1 chatroom)&#10; dodane zmiana podlaczonego servera" />
+    <option name="LAST_COMMIT_MESSAGE" value=" Progress is progress.&#10; dodany JDialog do connectowania sie do servera (narazie tylko 1 chatroom)&#10; dodane zmiana podlaczonego servera" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1002,15 +1007,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Desktop/desktopModule/src/clientGui.jfd">
-      <provider selected="true" editor-type-id="JFormDesigner">
-        <state />
+    <entry file="file://$PROJECT_DIR$/Desktop/desktopModule/src/testSRV/Server.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="28" column="39" lean-forward="true" selection-start-line="28" selection-start-column="39" selection-end-line="28" selection-end-column="39" />
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Desktop/desktopModule/src/Client.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="0" lean-forward="true" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+        <state relative-caret-position="459">
+          <caret line="75" column="9" lean-forward="true" selection-start-line="75" selection-start-column="9" selection-end-line="75" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#whileChatting#0;class#Client#0" expanded="false" />
@@ -1018,35 +1026,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Desktop/desktopModule/src/clientListeningThread.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="19" column="27" lean-forward="true" selection-start-line="19" selection-start-column="27" selection-end-line="19" selection-end-column="27" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#371#372#0" expanded="true" />
-            <element signature="e#405#406#0" expanded="true" />
-          </folding>
-        </state>
+    <entry file="file://$PROJECT_DIR$/Desktop/desktopModule/src/clientGui.jfd">
+      <provider selected="true" editor-type-id="JFormDesigner">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Desktop/desktopModule/src/clientHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="32" column="3" lean-forward="true" selection-start-line="32" selection-start-column="3" selection-end-line="32" selection-end-column="3" />
+        <state relative-caret-position="391">
+          <caret line="32" column="9" lean-forward="false" selection-start-line="32" selection-start-column="9" selection-end-line="32" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1009#1010#0" expanded="true" />
-            <element signature="e#1052#1053#0" expanded="true" />
+            <element signature="e#979#980#0" expanded="true" />
+            <element signature="e#1022#1023#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Desktop/desktopModule/src/testSRV/Server.java">
+    <entry file="file://$PROJECT_DIR$/Desktop/desktopModule/src/clientListeningThread.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="193">
-          <caret line="54" column="0" lean-forward="false" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="91">
+          <caret line="18" column="28" lean-forward="true" selection-start-line="18" selection-start-column="28" selection-end-line="20" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#405#406#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

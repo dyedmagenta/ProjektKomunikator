@@ -28,9 +28,9 @@ public class clientListeningThread extends Thread {
 
 
             } catch (IOException e) {
-                e.printStackTrace();
+
             } catch (ClassNotFoundException e) {
-                e.printStackTrace();
+
             }
 
 
