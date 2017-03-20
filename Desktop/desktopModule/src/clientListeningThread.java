@@ -8,7 +8,7 @@ import java.io.ObjectInputStream;
  */
 public class clientListeningThread extends Thread {
     private ObjectInputStream input ;
-
+    private boolean running = true;
     public clientListeningThread(ObjectInputStream input){
         this.input = input;
 
@@ -16,9 +16,11 @@ public class clientListeningThread extends Thread {
     }
 
 
-
+    public void terminate(){
+        this.running=false;
+    }
     public void run(){
-        while(true){
+        while(running){
             try {
                 String message=(String) input.readObject();
                 System.out.println("MSG received: "+ message);

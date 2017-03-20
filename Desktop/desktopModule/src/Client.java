@@ -8,10 +8,10 @@ import java.net.Socket;
  */
 
 public class Client extends Thread{
+    private String userName = "anonim";
     private String message ;
-    private String serverIP;
     private Socket connection;
-
+    private clientListeningThread thrd;
 
     private  ObjectOutputStream output;
     private ObjectInputStream input ;
@@ -20,16 +20,32 @@ public class Client extends Thread{
 
 
 
-    private void connectToServer() throws IOException{
-        connection = new Socket(InetAddress.getLocalHost(),1234);
-        System.out.println("Client connected to Server");
+    private void connectToServer(String userName,InetAddress adres, int port) throws IOException{
+        connection = new Socket(adres,port);
+        System.out.println(userName + "connected to Server");
 
     }
 
 
-    public Client(){
-        startRunning();
+    public Client(String userName,InetAddress adres, int port){
+        this.userName=userName;
+        startRunning(adres,port);
 
+
+
+    }
+
+
+    public void startRunning(InetAddress adres, int port){
+
+        try {
+            connectToServer(userName,adres,port);
+            setupStreams();
+            thrd = new clientListeningThread(input);
+            thrd.start();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
 
     }
@@ -37,6 +53,7 @@ public class Client extends Thread{
     private void setupStreams(){
         try {
             output= new ObjectOutputStream(connection.getOutputStream());
+            output.writeObject("userName: "+ this.userName);
             output.flush();
             input = new ObjectInputStream(connection.getInputStream());
             System.out.println( "Clients streams set up! ");
@@ -45,39 +62,25 @@ public class Client extends Thread{
         }
 
     }
-    private void closeEverything(){
+    public void disconnect(){
         System.out.println ("Closing everything");
         try {
+            thrd.terminate();
             output.close();
             input.close();
             connection.close();
+
         } catch (IOException e) {
             e.printStackTrace();
         }
 
-
-
-
-
     }
-    public void startRunning(){
 
-        try {
-            connectToServer();
-            setupStreams();
-            clientListeningThread thrd = new clientListeningThread(input);
-            thrd.start();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-
-    }
     public void sendMessage(String message){
         try {
-            output.writeObject("Client: "+ message);
+            output.writeObject(userName + " : "+ message);
             output.flush();
-            System.out.println("MSG: " + message);
+           // System.out.println("MSG: " + message);
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -99,8 +102,6 @@ public class Client extends Thread{
 
 
         }
-
-
     }
 
 
