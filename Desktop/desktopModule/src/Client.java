@@ -7,7 +7,7 @@ import java.net.Socket;
  * Created by gwozdo on 19.03.2017.
  */
 
-public class Client {
+public class Client extends Thread{
     private String message ;
     private String serverIP;
     private Socket connection;
@@ -19,9 +19,18 @@ public class Client {
 
 
 
+
     private void connectToServer() throws IOException{
         connection = new Socket(InetAddress.getLocalHost(),1234);
         System.out.println("Client connected to Server");
+
+    }
+
+
+    public Client(){
+        startRunning();
+
+
 
     }
 
@@ -56,7 +65,8 @@ public class Client {
         try {
             connectToServer();
             setupStreams();
-            whileChatting();
+            clientListeningThread thrd = new clientListeningThread(input);
+            thrd.start();
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -78,6 +88,7 @@ public class Client {
             try {
                 message=(String) input.readObject();
                 System.out.println("MSG received: "+ message);
+                clientHandler.receiveMessage(message);
 
 
             } catch (IOException e) {
