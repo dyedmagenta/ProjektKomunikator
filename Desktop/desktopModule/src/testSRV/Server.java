@@ -46,7 +46,7 @@ public class Server {
             try {
                 message = (String) input.readObject();
                 System.out.println(message);
-                //sendMessage("msg received: " + message);
+                sendMessage( message);
             }catch (ClassNotFoundException e){
                 System.out.println("unknown command");
             }

@@ -8,60 +8,63 @@ import java.net.Socket;
  */
 
 public class Client extends Thread{
+
+    // creating variables
     private String userName = "anonim";
     private String message ;
     private Socket connection;
     private clientListeningThread thrd;
-
     private  ObjectOutputStream output;
     private ObjectInputStream input ;
 
 
 
-
-
-    private void connectToServer(String userName,InetAddress adres, int port) throws IOException{
-        connection = new Socket(adres,port);
-        System.out.println(userName + "connected to Server");
-
-    }
-
-
+    // Client class constructor, which sets username and runs startRunning() method.
     public Client(String userName,InetAddress adres, int port){
         this.userName=userName;
         startRunning(adres,port);
 
+    }
 
+    // method that establishes Socket connection to given Server
+    private void connectToServer(InetAddress adres, int port) throws IOException{
+        connection = new Socket(adres,port);
+//tst//System.out.println(userName + "connected to Server");
 
     }
 
 
+
+
+    // method that launches client connection and stream seting methods. Also starts clientListeningThread
     public void startRunning(InetAddress adres, int port){
 
         try {
-            connectToServer(userName,adres,port);
+            connectToServer(adres,port);
             setupStreams();
             thrd = new clientListeningThread(input);
             thrd.start();
         } catch (IOException e) {
             e.printStackTrace();
         }
-
-
     }
 
+
+    // this method sets up input and output streams. Also it sends first message to server.
     private void setupStreams(){
         try {
             output= new ObjectOutputStream(connection.getOutputStream());
             output.writeObject("userName: "+ this.userName);
             output.flush();
             input = new ObjectInputStream(connection.getInputStream());
-            System.out.println( "Clients streams set up! ");
+//tst// System.out.println( "Clients streams set up! ");
         } catch (IOException e) {
             e.printStackTrace();
         }
-
     }
+
+    //this method disconnects current user from server by sending EOC message, terminating Client thread
+    //closing Streams and finally closing Socket connection
     public void disconnect(){
         System.out.println ("Closing everything");
         try {
@@ -77,33 +80,19 @@ public class Client extends Thread{
 
     }
 
+
+    //this method is used to compose and send message to server
     public void sendMessage(String message){
         try {
             output.writeObject(userName + " : "+ message);
             output.flush();
-           // System.out.println("MSG: " + message);
+//tst// System.out.println("MSG: " + message);
         } catch (IOException e) {
             e.printStackTrace();
         }
 
     }
-    private void whileChatting(){
-        while(true){
-            try {
-                message=(String) input.readObject();
-                System.out.println("MSG received: "+ message);
-                clientHandler.receiveMessage(message);
 
-
-            } catch (IOException e) {
-                e.printStackTrace();
-            } catch (ClassNotFoundException e) {
-                e.printStackTrace();
-            }
-
-
-        }
-    }
 
 
 
