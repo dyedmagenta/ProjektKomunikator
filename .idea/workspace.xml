@@ -3,10 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="7e651b06-d4e1-4bbb-ba3c-be3915bf2584" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Desktop/desktopModule/src/Client.java" afterPath="$PROJECT_DIR$/Desktop/desktopModule/src/Client.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Desktop/desktopModule/src/clientGui.java" afterPath="$PROJECT_DIR$/Desktop/desktopModule/src/clientGui.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Desktop/desktopModule/src/clientGui.jfd" afterPath="$PROJECT_DIR$/Desktop/desktopModule/src/clientGui.jfd" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Desktop/desktopModule/src/clientHandler.java" afterPath="$PROJECT_DIR$/Desktop/desktopModule/src/clientHandler.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Desktop/desktopModule/src/testSRV/Server.java" afterPath="$PROJECT_DIR$/Desktop/desktopModule/src/testSRV/Server.java" />
     </list>
     <ignored path="Mobile.iws" />
@@ -40,8 +36,8 @@
       <file leaf-file-name="Server.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Desktop/desktopModule/src/testSRV/Server.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="275">
-              <caret line="53" column="46" lean-forward="true" selection-start-line="53" selection-start-column="46" selection-end-line="53" selection-end-column="46" />
+            <state relative-caret-position="921">
+              <caret line="67" column="27" lean-forward="true" selection-start-line="67" selection-start-column="27" selection-end-line="67" selection-end-column="27" />
               <folding />
             </state>
           </provider>
@@ -184,8 +180,8 @@
         <option value="$PROJECT_DIR$/Desktop/desktopModule/src/clientGui.jfd" />
         <option value="$PROJECT_DIR$/Desktop/desktopModule/src/clientHandler.java" />
         <option value="$PROJECT_DIR$/Desktop/desktopModule/src/clientGui.java" />
-        <option value="$PROJECT_DIR$/Desktop/desktopModule/src/testSRV/Server.java" />
         <option value="$PROJECT_DIR$/Desktop/desktopModule/src/Client.java" />
+        <option value="$PROJECT_DIR$/Desktop/desktopModule/src/testSRV/Server.java" />
       </list>
     </option>
   </component>
@@ -311,7 +307,7 @@
       <recent name="C:\Users\gwozdo\IdeaProjects\ProjektKomunikatorNew\Desktop" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.clientHandler">
+  <component name="RunManager" selected="Application.srvTest">
     <configuration default="false" name="srvTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -625,8 +621,8 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Application.clientHandler" />
-        <item index="1" class="java.lang.String" itemvalue="Application.srvTest" />
+        <item index="0" class="java.lang.String" itemvalue="Application.srvTest" />
+        <item index="1" class="java.lang.String" itemvalue="Application.clientHandler" />
         <item index="2" class="java.lang.String" itemvalue="Application.clientGui (1)" />
         <item index="3" class="java.lang.String" itemvalue="Application.clientGui" />
         <item index="4" class="java.lang.String" itemvalue="Application.ClientTest" />
@@ -686,12 +682,19 @@
       <option name="project" value="LOCAL" />
       <updated>1490057153792</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="tweaki tweaki i commenty :D VOL 2&#10;">
+      <created>1490062459884</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1490062459884</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -703,7 +706,7 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32921347" sideWeight="0.50289017" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32875264" sideWeight="0.49710983" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32875264" sideWeight="0.49710983" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -767,7 +770,8 @@
     <MESSAGE value=" Progress is progress.&#10; dodany JDialog do connectowania sie do servera (narazie tylko 1 chatroom)&#10; dodane zmiana podlaczonego servera" />
     <MESSAGE value="minor tweaki. commenty w nastepnym commicie&#10;" />
     <MESSAGE value="tweaki tweaki i commenty :D&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="tweaki tweaki i commenty :D&#10;" />
+    <MESSAGE value="tweaki tweaki i commenty :D VOL 2&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="tweaki tweaki i commenty :D VOL 2&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1078,8 +1082,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Desktop/desktopModule/src/testSRV/Server.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="53" column="46" lean-forward="true" selection-start-line="53" selection-start-column="46" selection-end-line="53" selection-end-column="46" />
+        <state relative-caret-position="921">
+          <caret line="67" column="27" lean-forward="true" selection-start-line="67" selection-start-column="27" selection-end-line="67" selection-end-column="27" />
           <folding />
         </state>
       </provider>

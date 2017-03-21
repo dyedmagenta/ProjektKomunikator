@@ -45,10 +45,6 @@ public class Server {
         while(true){
             try {
                 message = (String) input.readObject();
-                if(message.equals("EOC")){
-
-                    closeConnection();
-                }
                 System.out.println(message);
                 sendMessage( message);
             }catch (ClassNotFoundException e){
