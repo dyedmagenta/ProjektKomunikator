@@ -20,6 +20,9 @@
 
 
 ///////////////// TUTAJ OPISYWANE SA LISTENERY DO NASZYCH PRZYCISKOW ITP.
+
+
+
             private void menuItem1ActionPerformed(ActionEvent e) {
                 //dropConnections();
                 System.exit(0);
@@ -32,9 +35,12 @@
             }
 
 
-
+            // BUTTON CONNECT!
             private void button2ActionPerformed(ActionEvent e) {
-                 clientHandler.createNewClient(userNameField.getText(),serverAddressField.getText(),serverPortField.getText());
+
+                clientHandler.createNewClient(userNameField.getText(),serverAddressField.getText(),serverPortField.getText());
+                listmodel.clear();
+                listmodel.addElement("Connected to server");
                  dialog1.dispose();
             }
 
@@ -67,6 +73,17 @@
 
 
 
+            private void menuFileDcActionPerformed(ActionEvent e) {
+                System.out.println("DC btn clicked");
+                listmodel.addElement("DISCONNECTED FROM SERVER");
+                clientHandler.disconnectClient();
+            }
+
+
+
+
+
+
 
             private void initComponents() {
                 // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents
@@ -76,12 +93,12 @@
                 topMenuBar = new JMenuBar();
                 fileMenu = new JMenu();
                 menuItem2 = new JMenuItem();
+                menuItem3 = new JMenuItem();
                 menuItem1 = new JMenuItem();
                 settingsMenu = new JMenu();
                 helpMenu = new JMenu();
                 SendButton = new JButton();
                 messageTextField = new JTextField();
-                label1 = new JLabel();
                 scrollPane1 = new JScrollPane();
                 dialog1 = new JDialog();
                 connectButton = new JButton();
@@ -115,6 +132,11 @@
                         });
                         fileMenu.add(menuItem2);
 
+                        //---- menuItem3 ----
+                        menuItem3.setText("Disconnect");
+                        menuItem3.addActionListener(e -> menuFileDcActionPerformed(e));
+                        fileMenu.add(menuItem3);
+
                         //---- menuItem1 ----
                         menuItem1.setText("Exit");
                         menuItem1.addActionListener(e -> menuItem1ActionPerformed(e));
@@ -145,7 +167,7 @@
                     }
                 });
                 contentPane.add(SendButton);
-                SendButton.setBounds(new Rectangle(new Point(405, 360), SendButton.getPreferredSize()));
+                SendButton.setBounds(555, 360, 80, SendButton.getPreferredSize().height);
 
                 //---- messageTextField ----
                 messageTextField.addKeyListener(new KeyAdapter() {
@@ -155,26 +177,25 @@
                     }
                 });
                 contentPane.add(messageTextField);
-                messageTextField.setBounds(190, 360, 190, messageTextField.getPreferredSize().height);
-
-                //---- label1 ----
-                label1.setText("text");
-                contentPane.add(label1);
-                label1.setBounds(65, 410, 345, label1.getPreferredSize().height);
+                messageTextField.setBounds(145, 365, 405, messageTextField.getPreferredSize().height);
 
                 //======== scrollPane1 ========
                 {
+                    scrollPane1.setHorizontalScrollBarPolicy(ScrollPaneConstants.HORIZONTAL_SCROLLBAR_ALWAYS);
+                    scrollPane1.setComponentOrientation(ComponentOrientation.LEFT_TO_RIGHT);
+                    scrollPane1.setAutoscrolls(true);
 
                     //---- list1 ----
-                    list1.setBackground(new Color(70, 63, 65));
                     list1.setBorder(LineBorder.createBlackLineBorder());
                     list1.setVisibleRowCount(999);
                     list1.setComponentOrientation(ComponentOrientation.LEFT_TO_RIGHT);
                     list1.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
+                    list1.setFont(new Font("Segoe UI", Font.PLAIN, 16));
+                    list1.setForeground(new Color(100, 187, 187));
                     scrollPane1.setViewportView(list1);
                 }
                 contentPane.add(scrollPane1);
-                scrollPane1.setBounds(145, 10, 490, 345);
+                scrollPane1.setBounds(140, 10, 490, 345);
 
                 contentPane.setPreferredSize(new Dimension(720, 500));
                 setSize(720, 500);
@@ -183,6 +204,7 @@
                 //======== dialog1 ========
                 {
                     dialog1.setTitle("Connect options");
+                    dialog1.setAlwaysOnTop(true);
                     Container dialog1ContentPane = dialog1.getContentPane();
                     dialog1ContentPane.setLayout(null);
 
@@ -235,11 +257,15 @@
                         dialog1ContentPane.setMinimumSize(preferredSize);
                         dialog1ContentPane.setPreferredSize(preferredSize);
                     }
-                    dialog1.pack();
+                    dialog1.setSize(275, 255);
                     dialog1.setLocationRelativeTo(dialog1.getOwner());
                 }
                 // JFormDesigner - End of component initialization  //GEN-END:initComponents
-
+                scrollPane1.getVerticalScrollBar().addAdjustmentListener(new AdjustmentListener() {
+                    public void adjustmentValueChanged(AdjustmentEvent e) {
+                        e.getAdjustable().setValue(e.getAdjustable().getMaximum());
+                    }
+                });
             }
 
             // JFormDesigner - Variables declaration - DO NOT MODIFY  //GEN-BEGIN:variables
@@ -247,12 +273,12 @@
             private JMenuBar topMenuBar;
             private JMenu fileMenu;
             private JMenuItem menuItem2;
+            private JMenuItem menuItem3;
             private JMenuItem menuItem1;
             private JMenu settingsMenu;
             private JMenu helpMenu;
             private JButton SendButton;
             private JTextField messageTextField;
-            private JLabel label1;
             private JScrollPane scrollPane1;
             private JList list1;
             private JDialog dialog1;
@@ -272,8 +298,8 @@
             // metoda odpowiedzialna za dopisywanie wiadomosci otrzymanych od serwera do listy wiadomości
             public void appendMessage(String message){
                 System.out.println("clientGui: message = "+ message);
-                label1.setText(message);
                 listmodel.addElement(message);
+                listmodel.getSize();
 
             }
 

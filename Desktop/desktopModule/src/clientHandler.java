@@ -27,8 +27,8 @@ public class clientHandler {
 
             }
         }else{
-            client.disconnect();
-            connectedToServer=false;
+            disconnectClient();
+
             createNewClient(userName, serverAddress, serverPort);
 
 
@@ -48,6 +48,12 @@ public class clientHandler {
         System.out.println("clientHandler: message = "+ message);
         Gui.appendMessage(message);
     }
+    public static void disconnectClient(){
+        System.out.println("DC method running");
+        connectedToServer=false;
+        client.disconnect();
 
+
+    }
     }
 

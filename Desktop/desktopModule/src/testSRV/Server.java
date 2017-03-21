@@ -45,11 +45,27 @@ public class Server {
         while(true){
             try {
                 message = (String) input.readObject();
+                if(message.equals("EOC")){
+
+                    closeConnection();
+                }
                 System.out.println(message);
                 sendMessage( message);
             }catch (ClassNotFoundException e){
                 System.out.println("unknown command");
             }
+        }
+    }
+
+    private void closeConnection() {
+
+
+        try {
+            output.close();
+            input.close();
+            connection.close();
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
 

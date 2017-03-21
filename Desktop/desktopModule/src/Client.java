@@ -68,7 +68,8 @@ public class Client extends Thread{
     public void disconnect(){
         System.out.println ("Closing everything");
         try {
-            sendMessage(userName+":EOC");
+
+
             thrd.terminate();
             output.close();
             input.close();
@@ -76,6 +77,8 @@ public class Client extends Thread{
 
         } catch (IOException e) {
             e.printStackTrace();
+        }catch(NullPointerException f){
+            System.out.println("erorororo");
         }
 
     }

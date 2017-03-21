@@ -14,41 +14,38 @@ new FormModel {
 				"text": "Send !"
 				addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseClicked", "SendButtonMouseClicked", true ) )
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-				"x": 405
+				"x": 555
 				"y": 360
+				"width": 80
 			} )
 			add( new FormComponent( "javax.swing.JTextField" ) {
 				name: "messageTextField"
 				addEvent( new FormEvent( "java.awt.event.KeyListener", "keyPressed", "messageTextFieldKeyPressed", true ) )
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-				"x": 190
-				"y": 360
-				"width": 190
-			} )
-			add( new FormComponent( "javax.swing.JLabel" ) {
-				name: "label1"
-				"text": "text"
-			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-				"x": 65
-				"y": 410
-				"width": 345
+				"x": 145
+				"y": 365
+				"width": 405
 			} )
 			add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
 				name: "scrollPane1"
+				"horizontalScrollBarPolicy": 32
+				"componentOrientation": sfield java.awt.ComponentOrientation LEFT_TO_RIGHT
+				"autoscrolls": true
 				add( new FormComponent( "javax.swing.JList" ) {
 					name: "list1"
-					"background": new java.awt.Color( 70, 63, 65, 255 )
 					"border": new javax.swing.border.LineBorder( sfield java.awt.Color black, 1, false )
 					"visibleRowCount": 999
 					"componentOrientation": sfield java.awt.ComponentOrientation LEFT_TO_RIGHT
 					"selectionMode": 0
+					"font": new java.awt.Font( "Segoe UI", 0, 16 )
+					"foreground": new java.awt.Color( 100, 187, 187, 255 )
 					auxiliary() {
 						"JavaCodeGenerator.customCreateCode": "list1 = new JList(listmodel);"
 						"JavaCodeGenerator.customCreate": true
 					}
 				} )
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-				"x": 145
+				"x": 140
 				"y": 10
 				"width": 490
 				"height": 345
@@ -63,6 +60,11 @@ new FormModel {
 						"text": "Connect"
 						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "menuItem2ActionPerformed", true ) )
 						addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseClicked", "menuFileConnectMouseClicked", true ) )
+					} )
+					add( new FormComponent( "javax.swing.JMenuItem" ) {
+						name: "menuItem3"
+						"text": "Disconnect"
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "menuFileDcActionPerformed", true ) )
 					} )
 					add( new FormComponent( "javax.swing.JMenuItem" ) {
 						name: "menuItem1"
@@ -86,6 +88,8 @@ new FormModel {
 		add( new FormWindow( "javax.swing.JDialog", new FormLayoutManager( class com.jformdesigner.runtime.NullLayout ) ) {
 			name: "dialog1"
 			"title": "Connect options"
+			"$sizePolicy": 1
+			"alwaysOnTop": true
 			add( new FormComponent( "javax.swing.JButton" ) {
 				name: "connectButton"
 				"text": "Connect"
