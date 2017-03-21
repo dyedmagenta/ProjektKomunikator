@@ -57,7 +57,6 @@ public class ClientThread implements Runnable {
                     ComServer.connectionArray.add(ClientThread.this);
 
                 }else if(!isAuthenticated){
-                    isAuthenticated = false;
                     isThreadRunning = false;
                     System.out.println("USER NOT AUTH");
                 }
@@ -67,10 +66,8 @@ public class ClientThread implements Runnable {
 
                 //Echo message to every user connected and authenticated (on connectionArray)
                 for(ClientThread client:ComServer.connectionArray){
-                    Socket TEMP_SOCK = (Socket)client.SOCK;
-                    PrintWriter TEMP_OUT = new PrintWriter(TEMP_SOCK.getOutputStream());
-                    TEMP_OUT.println(message);
-                    TEMP_OUT.flush();
+                    client.OUTPUT.println(message);
+                    client.OUTPUT.flush();
                     System.out.println("SENDING" + message.toLowerCase() + "TO :" + client.USERNAME);
                 }
 
