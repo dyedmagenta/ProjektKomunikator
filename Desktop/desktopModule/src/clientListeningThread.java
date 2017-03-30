@@ -1,5 +1,6 @@
 package src;
 
+import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 
@@ -7,11 +8,11 @@ import java.io.ObjectInputStream;
  * Created by gwozdo on 20.03.2017.
  */
 public class clientListeningThread extends Thread {
-    private ObjectInputStream input ;
+    private BufferedReader input ;
     private boolean running = true;
 
     // this is basic constructor that has one parameter, which contains Client's ObjectInputStream
-    public clientListeningThread(ObjectInputStream input){
+    public clientListeningThread(BufferedReader input){
         this.input = input;
 
 
@@ -27,14 +28,12 @@ public class clientListeningThread extends Thread {
     public void run(){
         while(running){
             try {
-                String message=(String) input.readObject();
+                String message=(String) input.readLine();
                 System.out.println("MSG received: "+ message);
                 clientHandler.receiveMessage(message);
 
 
             } catch (IOException e) {
-
-            } catch (ClassNotFoundException e) {
 
             }
 

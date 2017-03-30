@@ -14,8 +14,8 @@ public class Client extends Thread{
     private String message ;
     private Socket connection;
     private clientListeningThread thrd;
-    private  ObjectOutputStream output;
-    private ObjectInputStream input ;
+    private PrintWriter output;
+    private BufferedReader input ;
 
 
 
@@ -53,10 +53,8 @@ public class Client extends Thread{
     // this method sets up input and output streams. Also it sends first message to server.
     private void setupStreams(){
         try {
-            output= new ObjectOutputStream(connection.getOutputStream());
-            output.writeObject("userName: "+ this.userName);
-            output.flush();
-            input = new ObjectInputStream(connection.getInputStream());
+             output = new PrintWriter(connection.getOutputStream(), true);
+            input = new BufferedReader(new InputStreamReader(connection.getInputStream()));
 //tst// System.out.println( "Clients streams set up! ");
         } catch (IOException e) {
             e.printStackTrace();
@@ -86,13 +84,11 @@ public class Client extends Thread{
 
     //this method is used to compose and send message to server
     public void sendMessage(String message){
-        try {
-            output.writeObject(userName + " : "+ message);
+
+            output.println(userName + " : "+ message);
             output.flush();
 //tst// System.out.println("MSG: " + message);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+
 
     }
 
