@@ -7,7 +7,7 @@ Directory for server app
 	<ul>
 		<li>	
 			Establishing Connection:
-			Server : "Hello, identify yourself"
+			<br>Server : "Hello, identify yourself"
 			Client : "Hello, @{1}" 1 - Username
 			If username is taken add number after username eg.  
 		</li>
