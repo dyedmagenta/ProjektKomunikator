@@ -21,7 +21,7 @@ Directory for server app
 		</li>
 		<li>
 			If Username is registered
-			<br>Server : "Username @{1} is registered, to log in use "LOGIN @USERNAME PASSWORD" command"
+			<br>Server : "Username @{1} is registered, to log in use "LOGIN @USERNAME PASSWORD command"
 		</li>
 		<li>
 			Sending Message Client -> Chatroom:
@@ -34,6 +34,8 @@ Directory for server app
 		<li>
 			Changing chatroom:
 			<br>Client : "JOIN #{1}" 1 - Chatroom name
+			<br>If user is banned from chatroom
+			<br>Server: "Sorry, you are banned from #{1} room" – 1 Chatroom name
 		</li>
 		<li>
 			Sending Private messages Client -> Server:
@@ -41,11 +43,13 @@ Directory for server app
 		</li>
 		<li>
 			Sending Private messages Server -> Client:
-			<br>Client : "@{1} PRIVMSG {2}" 1 - Username to who sent priv msg, 2 - Message Content
+			<br>Server : "@{1} PRIVMSG {2}" 1 - Username who sent private message, 2 - Message Content
 		</li>
 		<li>
 			Create chatroom:
 			<br>Client : "CREATEROOM #{1}" 1 - Chatroom name
+			<br>If Room is already created
+			<br>Server : "Room #{1}, is already created, to join room use "JOIN #RoomName" "
 		</li>
 		<li>
 			Mute/Unmute User:
