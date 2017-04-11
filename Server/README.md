@@ -17,7 +17,11 @@ Directory for server app
 		</li>
 		<li>
 			If Username is taken
-			<br>Server : "Username, @{1} is taken already"
+			<br>Server : "Username @{1} is taken already" 1 - Username
+		</li>
+		<li>
+			If Username is registered
+			<br>Server : "Username @{1} is registered, to log in use "LOGIN @USERNAME PASSWORD" command"
 		</li>
 		<li>
 			Sending Message Client -> Chatroom:
@@ -63,7 +67,7 @@ Directory for server app
 		</li>
 		<li>
 			Register Account:
-			<br>Client : "REGISTER @{1} {2}" 1 - Username to register, 2 - password
+			<br>Client : "REGISTER @{1} {2} {3}" 1 - Username to register, 2 - password, 3 - email
 		</li>
 		<li>
 			Log In:
