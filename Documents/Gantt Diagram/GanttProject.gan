@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?><project name="ProjektKomunikator" company="" webLink="http://" view-date="2017-02-26" view-index="0" gantt-divider-location="363" resource-divider-location="300" version="2.8.3" locale="en_US">
+<?xml version="1.0" encoding="UTF-8"?><project name="ProjektKomunikator" company="" webLink="http://" view-date="2017-03-12" view-index="0" gantt-divider-location="329" resource-divider-location="300" version="2.8.3" locale="en_US">
     <description/>
     <view zooming-state="default:7" id="gantt-chart">
-        <field id="tpd3" name="Name" width="209" order="0"/>
-        <field id="tpd4" name="Begin date" width="70" order="1"/>
-        <field id="tpd5" name="End date" width="80" order="2"/>
+        <field id="tpd3" name="Name" width="188" order="0"/>
+        <field id="tpd4" name="Begin date" width="64" order="1"/>
+        <field id="tpd5" name="End date" width="73" order="2"/>
         <option id="taskLabelUp" value="id"/>
         <option id="taskLabelDown" value="resources"/>
         <option id="color.recent"><![CDATA[#ff6600 #00cccc #00cc33 #ff6633]]></option>
@@ -36,7 +36,7 @@
             <taskproperty id="tpd8" name="coordinator" type="default" valuetype="text"/>
             <taskproperty id="tpd9" name="predecessorsr" type="default" valuetype="text"/>
         </taskproperties>
-        <task id="139" name="Documents" color="#ff6600" meeting="false" start="2017-03-01" duration="35" complete="0" expand="false">
+        <task id="139" name="Documents" color="#ff6600" meeting="false" start="2017-03-01" duration="56" complete="0" expand="false">
             <task id="140" name="Specifying API" color="#ff6600" meeting="false" start="2017-03-01" duration="21" complete="0" expand="true">
                 <depend id="18" type="2" difference="0" hardness="Strong"/>
                 <depend id="88" type="2" difference="0" hardness="Strong"/>
@@ -53,6 +53,8 @@
             <task id="145" name="GUI Specification" color="#ff6600" meeting="false" start="2017-03-23" duration="5" complete="0" expand="true">
                 <depend id="72" type="2" difference="0" hardness="Strong"/>
             </task>
+            <task id="155" name="Description of all classes, methods and functions" color="#ff6600" meeting="false" start="2017-04-12" duration="26" complete="0" expand="true"/>
+            <task id="158" name="Constraints Specification" color="#8cb6ce" meeting="false" start="2017-04-18" duration="1" complete="0" expand="true"/>
         </task>
         <task id="6" name="Managing Client Sessions" color="#00cccc" meeting="false" start="2017-04-13" duration="20" complete="0" expand="true"/>
         <task id="18" name="Disconnecting Clients from Server" color="#00cccc" meeting="false" start="2017-03-30" duration="10" complete="0" expand="true">
@@ -61,7 +63,6 @@
             <depend id="76" type="2" difference="0" hardness="Strong"/>
         </task>
         <task id="26" name="Sending info about Client Connecting and Disconnecting with chatroom" color="#00cccc" meeting="false" start="2017-04-13" duration="10" complete="0" expand="true"/>
-        <task id="33" name="Description of all classes, methods and functions" color="#ff6600" meeting="false" start="2017-04-12" duration="26" complete="0" expand="true"/>
         <task id="76" name="Client Connection with Server" color="#00cc33" meeting="false" start="2017-04-13" duration="20" complete="0" expand="true"/>
         <task id="72" name="Client App Appearance/Layouts" color="#00cc33" meeting="false" start="2017-03-30" duration="15" complete="0" expand="true"/>
         <task id="88" name="Registering Username" color="#00cccc" meeting="false" start="2017-03-30" duration="37" complete="0" expand="false">
@@ -82,6 +83,7 @@
             <task id="105" name="Sending to Server" color="#8cb6ce" meeting="false" start="2017-03-30" duration="22" complete="0" expand="true"/>
             <task id="106" name="Sending to Client" color="#00cccc" meeting="false" start="2017-03-30" duration="22" complete="0" expand="true"/>
         </task>
+        <task id="159" name="Instrukcja Użytkownika" color="#8cb6ce" meeting="false" start="2017-03-13" duration="1" complete="0" expand="true"/>
     </tasks>
     <resources>
         <resource id="0" name="Marcin Omelan" function="Default:0" contacts="" phone=""/>
@@ -93,11 +95,13 @@
         <allocation task-id="72" resource-id="0" function="Default:0" responsible="true" load="100.0"/>
         <allocation task-id="76" resource-id="0" function="Default:0" responsible="true" load="100.0"/>
         <allocation task-id="145" resource-id="0" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="159" resource-id="0" function="Default:0" responsible="true" load="100.0"/>
         <allocation task-id="6" resource-id="1" function="Default:0" responsible="true" load="100.0"/>
         <allocation task-id="18" resource-id="1" function="Default:0" responsible="true" load="100.0"/>
         <allocation task-id="26" resource-id="1" function="Default:0" responsible="true" load="100.0"/>
         <allocation task-id="140" resource-id="1" function="Default:0" responsible="true" load="100.0"/>
-        <allocation task-id="33" resource-id="2" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="158" resource-id="1" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="155" resource-id="2" function="Default:0" responsible="true" load="100.0"/>
         <allocation task-id="0" resource-id="3" function="Default:1" responsible="true" load="100.0"/>
         <allocation task-id="142" resource-id="3" function="Default:1" responsible="true" load="100.0"/>
         <allocation task-id="143" resource-id="3" function="Default:1" responsible="true" load="100.0"/>
